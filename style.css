@@ -1,0 +1,217 @@
+*{
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0062be;
+  transition: 0.5s;
+  flex-wrap: wrap;
+  row-gap: 100px;
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.hamburger{
+  display: none;
+  cursor: pointer;
+  margin-top: 40px;
+ }
+ 
+ .bar{
+   display: block;
+   width: 38px;
+   height: 4px;
+   border-radius: 2px;
+   margin: 5px auto;
+   background-color: #ffff;
+   transition: all 0.3s ease-in-out;
+ }
+ 
+
+.logo{
+  width: 120px;
+}
+
+.navList{
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.navList li{
+  list-style: none;
+}
+.navList li a{
+  color: #ffff;
+  font-weight: 400;
+  font-size: 17px;
+}
+section{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100PX;
+ 
+}
+.textContent{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  row-gap: 20PX;
+  align-items: center;
+  justify-content: center;
+}
+.txtAndbtn{
+  width: 100%;
+}
+
+p{
+  font-size: 26px;
+  color: #ffff;
+}
+h2{
+  font-size: 85px;
+  color: #ffff;
+}
+
+button{
+  width: 35%;
+  font-size: 15px;
+  padding: 10PX 20px;
+  background-color: #ffff;
+  border-radius: 30px;
+  border: 0px;
+  color: black;
+ font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section img{
+  padding-right: 40px;
+}
+
+.typesOfPepsi{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.typesOfPepsi li{
+  list-style: none;
+}
+.typesOfPepsi li:hover{
+  transform: translateY(-15px);
+  cursor: pointer;
+}
+.typesOfPepsi img{
+  width: 50px;
+}
+
+.pepsiContent{
+  width: 100%;
+}
+
+@media(max-width: 1290px){
+  button{
+    width: 200px;
+  }
+  .pepsiPrincipal{
+    height: 70%;
+  }
+}
+@media(max-width: 930px){
+  .hamburger{
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3){
+  transform: translateY(-8px) rotate(-45deg);
+}
+.navList{
+  position: fixed;
+  right: -20rem;
+  top: 100px;
+  gap: 0;
+  border-radius: 0 0 20px 20px;
+  background-color: #e7eaee;
+  text-align: center;
+  flex-direction: column;
+  width: 20rem;
+  transition: 0.3s;
+  opacity: 0.8;
+}
+.navList li{
+  margin: 16px 0;
+}
+.navList.active{
+ right: 0;
+ 
+}
+.navList li a{
+  color: black;
+  opacity: 2;
+}
+
+}
+
+@media(max-width: 665px){
+  section{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+  }
+  .textContent{
+    width: 80%;
+  }
+  .pepsiPrincipal{
+    width: 200px;
+  }
+  .logo{
+    width: 80px;
+  }
+}
+@media(max-width: 363px){
+  .textContent h2{
+    font-size: 50px;
+  }
+  .textContent{
+    width: 100%;
+  }
+  button{
+    width: 130px;
+  }
+  section{
+    align-items: start;
+    justify-content: flex-start;
+  }
+  .pepsiPrincipal{
+    width: 170px;
+  }
+
+  .navList.active{
+    right: 0;
+    top: 170px;
+    
+   }
+}
